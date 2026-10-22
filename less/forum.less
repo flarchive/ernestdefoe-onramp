@@ -1,0 +1,69 @@
+// Onramp — built on core's CSS variables, so light, dark and every theme
+// that sets them colour it without a line of their own.
+//
+// 🚨 Only what can be on ANY page is here: the ring and the header button.
+// Everything else is in pages.less and arrives with the lazy chunks that
+// draw it, so forum.css carries almost nothing of Onramp for anyone.
+
+// —— The ring ————————————————————————————————————————————————————————————
+.OnrampRing {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  circle {
+    fill: none;
+    stroke-width: 3.2;
+  }
+
+  &-track {
+    stroke: var(--control-bg);
+  }
+
+  &-fill {
+    stroke: var(--primary-color);
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.6s ease;
+  }
+
+  &-label {
+    position: relative;
+    font-size: 0.78em;
+    font-weight: 700;
+    color: var(--text-color);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+// —— Header launcher —————————————————————————————————————————————————————
+.OnrampLauncher {
+  &-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &-count {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &-menu {
+    width: 340px;
+    max-width: calc(100vw - 24px);
+    padding: 0;
+  }
+
+  &-panel {
+    list-style: none;
+  }
+}
