@@ -1,0 +1,91 @@
+// Onramp — built on core's CSS variables, so light, dark and every theme
+// that sets them colour it without a line of their own.
+//
+// 🚨 Only what can be on ANY page is here: the ring and the header button.
+// Everything else is in pages.less and arrives with the lazy chunks that
+// draw it, so forum.css carries almost nothing of Onramp for anyone.
+
+// —— The ring ————————————————————————————————————————————————————————————
+.OnrampRing {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  circle {
+    fill: none;
+    stroke-width: 3.2;
+  }
+
+  // The done arc is the solid one; what is left is a faint track under it.
+  &-track {
+    stroke: var(--control-bg);
+  }
+
+  &-fill {
+    stroke: var(--primary-color);
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.6s ease;
+  }
+
+  &-label {
+    position: relative;
+    font-size: 0.78em;
+    font-weight: 700;
+    color: var(--text-color);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+// —— Header launcher —————————————————————————————————————————————————————
+.OnrampLauncher {
+  // 🚨 The closed button's ring is drawn in the header's own colours, never
+  // --primary-color: a coloured header IS the primary colour, so a primary arc
+  // vanished there and the light control-bg track read as the progress. The
+  // done arc takes --header-color (the forum title's colour: primary on a
+  // plain header, white on a coloured one), the rest a faint control colour.
+  // Scoped to the button: the open panel's ring sits on the menu's own bg.
+  &-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    .OnrampRing-track {
+      stroke: currentColor;
+      stroke-opacity: 0.25;
+    }
+
+    .OnrampRing-fill {
+      stroke: var(--header-color);
+    }
+  }
+
+  &-count {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+
+    // A coloured header's control colour is a 60% tint of the header itself —
+    // too faint for a number that is read, not just seen.
+    [data-colored-header='true'] & {
+      color: var(--header-color);
+    }
+  }
+
+  &-menu {
+    width: 340px;
+    max-width: calc(100vw - 24px);
+    padding: 0;
+  }
+
+  &-panel {
+    list-style: none;
+  }
+}
