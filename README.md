@@ -2,13 +2,17 @@
 
 > **Read-only archive of released versions of ernestdefoe/onramp.** Not for installation: use [Packagist](https://packagist.org/packages/ernestdefoe/onramp) or the [upstream repository](https://github.com/ernestdefoe/onramp).
 
-**0** versions archived · Latest: [`1.0.4`](https://github.com/flarchive/ernestdefoe-onramp/tree/archive/v1.0.4) · License: `MIT` · Flarum: `^2.0`
+**5** versions archived · Latest: [`1.0.4`](https://github.com/flarchive/ernestdefoe-onramp/tree/archive/v1.0.4) · License: `MIT` · Flarum: `^2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `1.0.0` | 2026-10-20 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-onramp/tree/archive/v1.0.0) |
+| `1.0.1` | 2026-10-22 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-onramp/tree/archive/v1.0.1) |
+| `1.0.2` | 2026-10-23 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-onramp/tree/archive/v1.0.2) |
+| `1.0.3` | 2026-10-24 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-onramp/tree/archive/v1.0.3) |
+| `1.0.4` | 2026-10-26 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-onramp/tree/archive/v1.0.4) |
 
 Catalog entry: [packages/ernestdefoe-onramp.json](https://github.com/flarchive/archive-index/blob/main/packages/ernestdefoe-onramp.json)
 
